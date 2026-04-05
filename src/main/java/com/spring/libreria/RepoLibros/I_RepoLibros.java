@@ -11,4 +11,6 @@ public interface I_RepoLibros {
 
     void save(Libros libro);
     void deleteById(long id);
+
+    void update(Libros libro);
 }

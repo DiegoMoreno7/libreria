@@ -42,4 +42,9 @@ public class ServicioLibro implements I_ServicioLibro{
         boolean encontrado = i_repoLibros.findAll().stream().anyMatch(libro -> libro.getTitulo().equals(titulo));
         return encontrado ? "Libro encontrado" : "Libro no encontrado";
     }
+
+    @Override
+    public void actualizar(Libros libro) {
+        i_repoLibros.update(libro);
+    }
 }

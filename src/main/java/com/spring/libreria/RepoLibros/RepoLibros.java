@@ -44,4 +44,13 @@ public class RepoLibros implements I_RepoLibros {
     public void deleteById(long id) {
         findById(id).ifPresent(libros::remove);
     }
+
+    @Override
+    public void update(Libros libro) {
+        findById(libro.getIdLibro()).ifPresent(exist ->{
+            exist.setAutor(libro.getAutor());
+            exist.setTitulo(libro.getTitulo());
+            exist.setFechaPublicacion(libro.getFechaPublicacion());
+        });
+    }
 }

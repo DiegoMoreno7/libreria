@@ -44,4 +44,10 @@ public class ControladorLibreria {
         i_servicioLibro.eliminarPorId(id);
         return ResponseEntity.noContent().build();
     }
+
+    @PutMapping("/put")
+    public ResponseEntity<Libros> actualizar(@RequestBody Libros libro){
+        i_servicioLibro.actualizar(libro);
+        return ResponseEntity.ok(libro);
+    }
 }

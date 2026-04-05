@@ -11,5 +11,6 @@ public interface I_ServicioLibro {
     Libros guardar(Libros libro);
     void eliminarPorId(long id);
     String buscarTitulo(String titulo);
+    void actualizar(Libros libro);
 
 }
